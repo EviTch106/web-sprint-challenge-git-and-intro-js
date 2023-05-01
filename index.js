@@ -301,11 +301,11 @@ function addArtist(array, name, years, genre, nationality, bio ) {
   const newperson = [ ...array];
   const nweobject =
   { 
-    name: "Emmanuel evina ", 
-    years: "2002 - 1921",
-    genre: "Web Design", 
-    nationality: "American",
-    bio: "my goal it to become an IT SpL"
+     "bio": "bio",
+     "genre": "genre",
+     "name": "name",
+     "nationality": "nationality",
+     "years": "years",
 }
 
 newperson.push(nweobject);
@@ -354,11 +354,22 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(array, nationality){
-  return ["Vasiliy Kandinskiy","Andrei Rublev","Kazimir Malevich","Mikhail Vrubel"]
+function artistByCountry(array, string){
+  let Spanisharray = [];
+
+
+  for(let i = 0; i<array.length; i++){
+    if(array[i].nationality === string){
+      Spanisharray.push(array[i].name)
+    }
+  }
+
+return Spanisharray
+
+
 }
 
-console.log(artistByCountry);
+console.log(artistByCountry(artists, 'spanish'));
 
 /* ***** END OF TASKS ***** */
 
